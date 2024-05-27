@@ -1,1 +1,3 @@
-console.log("¡Hola!");
+let data = null;
+
+console.log(typeof data)
