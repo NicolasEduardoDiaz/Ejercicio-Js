@@ -1,7 +1,9 @@
-let data = undefined;
+var text = "hola, me llamo nicolas";
+var Number = 42;
+var Boolean = true;
+var notDefined; // undefined
 
-console.log(typeof data)
-
-data = 1
-
-console.log(typeof data)
+console.log(typeof text);   //"string"
+console.log(typeof Number); //"Number"
+console.log(typeof Boolean);    //"Boolean"
+console.log(typeof notDefined); // undefined
