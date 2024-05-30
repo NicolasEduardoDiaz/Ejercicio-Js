@@ -1,13 +1,14 @@
-const miObjeto = {
-    nombre: "Ejemplo Objeto",
-    version: 1.0,
-    descripcion: "Un objeto de ejemplo con funcion",
-    mostrarInformacion: function(p1, p2){
-        console.log("Nombre " + this.nombre);
-        console.log("Version " + this.version);
-        console.log("Descripcion " + this.descripcion);
-        console.log("Parametro 1 " + p1);
-        console.log("Parametro 2 " + p2);
+const persona = {
+    nombre: "Alice",
+    edad: 28,
+    casado: true,
+    secretos: {
+        contraseña: "miContraseñaSecreta",
+        hobby: "programacion"
     }
 };
-miObjeto.mostrarInformacion("Valor 1", "Valor 2");
+function filtroReplacer(key, value){
+    return (key === "contraseña") ? "*********": value && (key === "nombre") ? "ALICE": value;
+}
+
+console.log(JSON.stringify(persona, filtroReplacer, 4));
