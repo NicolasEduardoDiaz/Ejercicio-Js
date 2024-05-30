@@ -8,7 +8,9 @@ const persona = {
     }
 };
 function filtroReplacer(key, value){
-    return (key === "contraseña") ? "*********": value && (key === "nombre") ? "ALICE": value;
+    return (key === "contraseña") ? "*********": value
+    
+     && (key === "nombre") ? "ALICE": value;
 }
 
 console.log(JSON.stringify(persona, filtroReplacer, 4));
